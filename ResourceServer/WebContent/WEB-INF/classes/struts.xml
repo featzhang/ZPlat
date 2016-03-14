@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="iDtvResource" namespace="/" extends="json-default">
+		<action name="getUserList" class="com.zys.idtv.action.UserAction"
+			method="getUserList">
+			<result name="success" type="json">
+				<param name="root">userListJSON</param>
+			</result>
+		</action>
+		<action name="getManagerUsers" class="com.zys.idtv.action.UserAction"
+			method="getManagerUsers">
+			<result name="success" type="json">
+				<param name="root">userListJSON</param>
+			</result>
+		</action>
+		<action name="getUserType" class="com.zys.idtv.action.UserAction"
+			method="getUserType">
+			<result name="success" type="json">
+				<param name="root">userTypeList</param>
+			</result>
+		</action>
+		<action name="addUsers" class="com.zys.idtv.action.UserAction"
+			method="addUsers">
+		</action>
+		<action name="checkLogin" class="com.zys.idtv.action.UserAction"
+			method="checkLogin">
+			<result name="success" type="json">
+				<param name="root">userEntityJson</param>
+			</result>
+		</action>
+		<!-- -->
+		<action name="getAllBitStreamServers" class="com.zys.idtv.action.BitStreamServerAction"
+			method="getAllBitStreamServers">
+			<result name="success" type="json">
+				<param name="root">bitStreamServerJson</param>
+			</result>
+		</action>
+		<action name="addNewBitStreamServer" class="com.zys.idtv.action.BitStreamServerAction"
+			method="addNewBitStreamServer">
+		</action>
+		<action name="removeBitStreamServer" class="com.zys.idtv.action.BitStreamServerAction"
+			method="removeBitStreamServer">
+		</action>
+		<action name="updateBitStreamServer" class="com.zys.idtv.action.BitStreamServerAction"
+			method="updateBitStreamServer">
+		</action>
+		<!-- timeTableData -->
+		<action name="getAllTimeTableDatas" class="com.zys.idtv.action.TimeTableAction"
+			method="getAllTimeTableDatas">
+			<result name="success" type="json">
+				<param name="root">allTimeTables</param>
+			</result>
+		</action>
+		<action name="addNewTimeTableData" class="com.zys.idtv.action.TimeTableAction"
+			method="addNewTimeTableData">
+		</action>
+		<action name="addNewTimeTableDatas" class="com.zys.idtv.action.TimeTableAction"
+			method="addNewTimeTableDatas">
+		</action>
+		<action name="updateTimeTableDatas" class="com.zys.idtv.action.TimeTableAction"
+			method="updateTimeTableDatas">
+		</action>
+		<action name="removeTimeTableDatas" class="com.zys.idtv.action.TimeTableAction"
+			method="removeTimeTableDatas">
+		</action>
+	</package>
+</struts>
